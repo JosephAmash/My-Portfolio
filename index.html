@@ -16,14 +16,11 @@
     <!-- Style -->
 
     <link rel="stylesheet" href="css/style.css">
-
     
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
 </head>
 <body>
-
-    <i class="fa-solid fa-bars"></i> 
-    
+ 
    <div class="bg-lines">
         <span></span>
         <span></span>
@@ -41,34 +38,28 @@
         <nav class="container">
             <a href="#" class="logo"><img src="img/J.png" alt=""></a>
 
-            <div class="links" id="links">
-                <!-- 
-                
-                <span class="close_menu" onclick="Open_colose_Menu()"><i class="fa-solid fa-xmark"><i><span>
-
-                -->
-
-                <a href="#" class="logo"><img src="img/J.png" alt=""></a>
+            <div class="nav_links"> 
+            
                 <a class="active" href="#">Home</a>
                 <a href="#about">About</a>
                 <a href="#services">Service</a>
                 <a href="#projects">Projects</a>
                 <a href="#contact">Contact</a>
+
+                <span onclick="Open_CloseMenu()" class="close_menu"><i class="fa-solid fa-xmark"></i></span>
             </div>
 
-            <div class="icons">
-                <a href="https://www.linkedin.com/in/joseph-amash" target="_blank"><i class="fa-brands fa-linkedin"></i></a>
-                <a href="https://www.github.com/github.com/JosephAmash" target="_blank"><i class="fa-brands fa-github"></i></a>
+            <div class="btns">
+
                 
-                <!--
-                <span class="icon_menu" onclick="Open_colose_Menu()"><i class="fa-solid fa-bars"></i></span>
-             
-                -->
+                <a href="https://www.linkedin.com/in/joseph-amash" target="_blank"> <img src="img/linkedin.png" alt=""></a>
+                
+                <span onclick="Open_CloseMenu()" class="open_menu"><i class="fa-solid fa-bars"></i></span>
             </div>
         </nav>
     </header>
     
-    <div class="hero">
+    <div class="home">
         <div class="container">
             <div class="div_Text">
                 <h4>I'm </h4>
@@ -79,8 +70,13 @@
                 </p>
                 
                 <div class="btns">
+                    
+                    <a href="img/CV Amash.pdf" download class="btn">Download CV </a>
+                    
+                    <!--
                     <a href="#" class="btn" download>hire me</a>
-                    <a href="img/CV Amash .pdf" class="btn_no_bg" download>Download Resume</a>
+                     <a href="img/CV Amash.pdf" class="btn_no_bg" download>Download Resume</a> 
+                     -->
                 </div>
             </div>
                 <div class="div_img">
@@ -109,7 +105,7 @@
                     <li><i class="fa-solid fa-check"></i>Web developer</li>
                 </ul>
 
-                <a href="img/CV Amash .pdf" download class="btn">Download CV </a>
+                <!-- <a href="img/CV Amash.pdf" download class="btn">Download CV </a> -->
             </div>
 
             <div class="div_img">
@@ -191,7 +187,7 @@
                 <div class="text">
                     <h4><span>Product Website</span></h4>
 
-                    <h3><a href="#"> Website Makeup Design</a></h3>
+                    <h3><a href="#"> projects 2 </a></h3>
 
                     <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Modi a veniam ratione?</p>
 
@@ -207,7 +203,7 @@
                 <div class="text">
                     <h4><span>Product Website</span></h4>
 
-                    <h3><a href="#"> Website Makeup Design</a></h3>
+                    <h3><a href="#"> projects 3 </a></h3>
 
                     <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Modi a veniam ratione?</p>
 
@@ -223,7 +219,7 @@
                 <div class="text">
                     <h4><span>Product Website</span></h4>
 
-                    <h3><a href="#"> Website Makeup Design</a></h3>
+                    <h3><a href="#"> </a> projects 4 </h3>
 
                     <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Modi a veniam ratione?</p>
 
@@ -250,15 +246,16 @@
                                 <a href="tel:+491637021495" target="_blank"><i class="fa-solid fa-phone"></i>Phone</a>
                                 <a href="https://www.linkedin.com/in/joseph-amash" target="_blank"><i class="fa-brands fa-linkedin"></i>linkedin</a>
                                 <a href="https://www.github.com/github.com/JosephAmash" target="_blank"><i class="fa-brands fa-github"></i>GitHub</a>
+                                <a href="https://www.xing.com/profile/Joseph_Amash" target="_blank"><i class="fa-brands fa-xing"></i>Xing</a>
                             </div>
                     </div>
 
-                    <form action="">
+                    <form action="https://formsubmit.co/josephtams1@gmail.com" method="POST">
                             <div class="inpts_form">
-                                <input type="text" placeholder="Full Name">
-                                <input type="text" placeholder="E-Mail">
-                                <input type="text" placeholder="Mobile Number">
-                                <input type="text" placeholder="Subject">
+                                <input type="text" placeholder="Full Name" name="Name" required>
+                                <input type="text" placeholder="Emaill" name="Email" required>
+                                <input type="text" placeholder="Mobile Number" name="Phone" required>
+                                <input type="text" placeholder="Subject" name="Subject" required>
 
                                 <textarea name="" id="" rows="10" placeholder="Your Message...."></textarea>
                             </div>

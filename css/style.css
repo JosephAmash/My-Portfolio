@@ -10,22 +10,30 @@
 }
 
 :root{
-    --main_color:#ce9222;
+    --main_color:#e29a15fd;
     --p_color:#8a8a8a;
     --bg_color:#1F1F1F;
-    --white_color:#79b7db;
+    --blue_color:#79b7db;
     --black_color:#070707;
     --border-color: rgba(255, 255, 255, 0.1);
 }
 
+html{
+    scroll-behavior: smooth;
+}
+
 body{
     background: #233238fb;
+    background-attachment:fixed;
+    background-size: cover;
+    background-position: center;
+    font-family: 'Kanit', sans-serif;
 }
 
 .container{
-    width: 80%;
-    margin: auto;
-    max-width: 1500px;
+    width: 90%;
+    margin: 0 auto;
+    max-width: 1350px;
 }
 
 section{
@@ -37,7 +45,7 @@ img{
 }
 
 h1,h2,h3,h4,h5,h6{
-    color: var(--white_color);
+    color: var(--blue_color);
     font-family: "DM Sans", sans-serif;
 }
 
@@ -59,19 +67,22 @@ p{
 }
 .btn{
     background: var(--main_color);
-    padding: 14px 30px;
+    padding: 12px 30px;
     border-radius: 10px;
+    border: 1px solid #ce9222;
     font-weight: 600;
     text-transform: capitalize;
     color: var(--black_color);
     transition: 0.3s;
 }
 .btn:hover{
+    color: #fff;
+    background: transparent;
     scale: 1.1;
 }
 
 .btn_no_bg{
-    color: var(--white_color);
+    color: var(--blue_color);
     text-transform: capitalize;
     text-decoration: underline;
     transition: 0.3s;
@@ -151,7 +162,7 @@ p{
 /* Start Header */
 
 header{
-    background-color: #1f3947;
+    background-color: #445f6d;
     position: fixed;
     top: 0;
     left: 0;
@@ -159,60 +170,48 @@ header{
     height: 100px;
     transition: 0.3s;
     z-index: 1000;
-
-}
-header.active{
-    background: var(--black_color);
-    border-bottom: 1px solid #7e565697;
-    transition: 0.3s ;
 }
 
-header.active:hover{
-    scale: 1.4;
-}
 header nav{
     display: flex;
     justify-content: space-between;
     align-items: center;
-    height: 100%;
+    height: 100px;
 }
 header nav .logo img{
     width: 80px;
    
 
 }
-header nav .links{
+header nav .nav_links{
     display: flex;
-    gap: 70px;
+    gap: 40px;
 }
-header nav .links a{
-    color: var(--white_color);
+header nav .nav_links a{
+    color: var(--blue_color);
     text-transform: capitalize;
-    font-size: 18px;
+    font-size: 20px;
     transition: 0.3s ;
 }
-header nav .links a:hover{
+header nav .nav_links a:hover{
     color: var(--main_color);
 }
-header nav .icons{
-    display: flex;
-    gap: 30px;
-}
-header nav .icons a{
-    color: var(--main_color);
-    font-size: 28px;
-    transition: 0.3s;
+
+header nav .btns{
+    width: 50px;    
 }
 
-header nav .icons a:hover{
-    scale: 1.4;
+.open_menu,
+.close_menu{
+    display: none;
 }
 
+/* End Header */
 
 
-/* start hero */ 
+/* start Home */ 
 
-.hero{
+.home{
     padding-top: 90px;
     height: 120vh;
     display: flex;
@@ -220,50 +219,55 @@ header nav .icons a:hover{
     align-items: center;
 }
 
-.hero .container{
+.home .container{
     display: flex;
     justify-content: space-between;
     align-items: center;
 }
-.hero .div_Text{
+.home .div_Text{
     width: 40%;
 }
-.hero .div_Text h4{
+.home .div_Text h4{
     color:antiquewhite;
     font-size: 35px;
     margin-bottom: 15px;
 }
-.hero .div_Text h1{
+.home .div_Text h1{
     font-size: 80px;
 }
-.hero .div_Text h2{
+.home .div_Text h2{
     font-size: 50px;
     font-weight: normal;
     line-height: 0.9;
 }
-.hero .div_Text p{
+.home .div_Text p{
     margin: 30px 0;
     font-size: 18px;
     width: 80%;
     line-height: 1.7;
 }
-.hero .btn{
+.heome.btn{
     font-size: 20px;
     padding: 18px 50px;
 }
 
-.hero .div_img{
+.home .div_img{
     width: 35%;
     position: sticky;
     border-radius: 0 0 500px 500px;
     overflow: hidden;
 }
-.hero .div_img .bg_img{
+.home .div_img .bg_img{
     position: absolute;
     bottom: 0;
     left: 0;
     z-index: -1;
 }
+
+/* End Home */
+
+
+
 
 /* start about */
 
@@ -295,14 +299,17 @@ header nav .icons a:hover{
 .about .div_text p{
     line-height: 1.8;
 }
+
 .about .div_text ul{
     display: flex;
-    color: var(--white_color);
-    margin: 30px 0 20px;
+    color: var(--blue_color);
+    font-size: 23px;
+    margin: 40px 0 30px;
     flex-wrap: wrap;
 }
+
 .about .div_text ul li{
-    width: 45%;
+    width: 50%;
     font-weight: bold;
     display: flex;
     gap: 10px;
@@ -312,11 +319,13 @@ header nav .icons a:hover{
     color: var(--main_color);
 }
 
+
+
 .about .div_img{
     width: 35%;
 }
 
-/* End About Section */ 
+/* End About */ 
 
 
 
@@ -431,11 +440,15 @@ header nav .icons a:hover{
     scale: 1.2;
 }
 
+/* 
+
 .projects .project_box.project_box_2{
     flex-direction: row-reverse;
 }
 
 
+*/
+ 
 /* End projects */ 
 
 
@@ -476,7 +489,7 @@ header nav .icons a:hover{
 }
 
 .contact .social_contact .links a{
-    color: var(--white_color);
+    color: var(--p_color);
     font-size: 20px;
     margin-bottom: 25px;
     position: relative;
@@ -550,7 +563,7 @@ header nav .icons a:hover{
 
 /* Footer Start */
 #footer {
-  background-color: #383848;
+  background-color: #1f3947;
   text-align: center;
   color: #fff;
   padding: 15px 0;
@@ -559,97 +572,88 @@ header nav .icons a:hover{
 /* Footer End */
 
 
-/* Start Responsive */ 
-
-.close_menu,
-header .links .logo,
-.icon_menu{
-    display: none;
-}
+/* Start Responsive  */
 
 
-
-@media (max-width:1250px) {
-    .container{
-        width: 90%;
-    }
-}
-
-@media (max-width:1000px) {
-    header nav .links{
+@media(max-width:1250px){
+    header nav .nav_links{
         position: fixed;
         top: 0;
+        right: -100px;
+        width: 100px;
+        bottom: 0;
+        background: #4c6363;
+        border-left: 1px solid rgba(133, 121, 82, 0.1);
+        display: flex;
         flex-direction: column;
-        width: 400px;
-        background: var(--black_color);
-        left: -400px;
-        padding: 50px 0;
-        height: 100%;
-        border-right: 1px solid var(--border-color);
         text-align: center;
+        padding-top: 100px;
         transition: 0.3s ease-in-out;
     }
-    header nav .links.active{
-        left: 0;
+    header nav .nav_links.active{
+        right: 0;
     }
+
     .close_menu{
         display: block;
-        font-size: 28px;
+        color: #ce9222;
+        font-size: 30px;
         position: absolute;
         top: 30px;
-        right: 30px;
+        left: 30px;
+        cursor: pointer;
     }
-    header .links .logo{
+    header nav .btns{
+        width: 80px;    
+    }
+    .open_menu{
         display: block;
+        font-size: 30px;
+        color: #ce9222;
     }
-    .icon_menu{
-        display: block;
-        font-size: 28px;
-    }
-
-
     /* Responsive Home */ 
 
-    .hero .div_Text h4{
+    .home .div_Text h4{
         font-size: 20px;
     }
 
-    .hero .div_Text h1{
+    .home .div_Text h1{
         font-size: 55px;
     }
 
-    .hero .div_Text h2{
+    .home .div_Text h2{
         font-size: 55px;
     }
 
-    .hero .div_Text p{
+    .home .div_Text p{
         font-size: 18px;
         margin: 30px auto;
     }
 
-    .hero .btn{
+    .home .btn{
         font-size: 18px;
         padding: 16px 40px;
     }
 
-    .hero .container{
+    .home .container{
         flex-direction: column;
     }
 
-    .hero .div_Text{
+    .home .div_Text{
         width: 100%;
         margin-top: 50px;
         text-align: center;
         margin-bottom: 30px;
     }
 
-    .hero .btns{
+    .home .btns{
         justify-content: center;
     }
-    .hero{
+    .home{
         height: auto;
     }
 
+    /* Responsive About */ 
     .about .container{
         flex-direction: column;
     }
@@ -663,62 +667,119 @@ header .links .logo,
         width: 45%;
     }
 
-}
+    /* Responsive Service */ 
+    .services .boxs .box{
+        width: 47%;
+        margin-bottom: 30px;
+    }
 
+    /* Project About */ 
 
-@media (max-width:500px){
+    .projects .project_box .text h3 a{
+        font-size: 25px;
+    }
 
-    .btn{
-        padding: 12px 25px;
+    .projects .project_box .text h4{
+        font-size: 16px;
+    }
+    .projects .project_box .text p{
         font-size: 14px;
     }
 
-    header nav .icons a{
-        font-size: 20px;
-    }
-    header nav .icons{
-        gap: 15px;
-        align-items: center;
+    .projects .project_box .text{
+        width: calc(50% - 50px);
+        margin-left: 50px;
     }
 
-    header nav .logo img{
-        width: 50px;
+
+    /* Contact About */ 
+    .contact .container{
+        flex-direction: column;
     }
-    header nav .links{
+
+    .contact .social_contact{
         width: 100%;
-        left: -100%;
+        margin-bottom: 40px;
     }
-    .icon_menu {
-        margin-left: 15px;
+
+    .contact .social_contact .links{
+        flex-direction: row;
+        flex-wrap: wrap;
     }
+
+    .contact .social_contact .links a{
+        width: 50%;
+        font-size: 16px;
+    }
+
+    .contact .social_contact .links a i{
+        width: 35px;
+        height: 35px;
+        line-height: 35px;
+    }
+
+    .contact form{
+        width: 80%;
+        margin: 0 auto;
+    }
+
+    .contact .btn{
+       font-size: 16px;
+       padding:13px 28px; 
+    }
+
+    #footer {
+        background-color: #1f3947;
+        text-align: center;
+        color: #fff;
+        padding: 15px 0;
+        font-size: 14px;
+      }
+}
+
+
+@media (max-width:600px){
+
+    header nav .nav_links{
+        width: 20%;
+        right: -22%;
+    }
+
+    header nav .btns{
+        width: 80px;    
+    }
+    
 
     /* Responsive Home */ 
 
-    .hero .div_Text h4{
+    .home .div_Text h4{
         font-size: 22px;
     }
 
-    .hero .div_Text h1{
+    .home .div_Text h1{
+        font-size: 40px;
+    }
+    
+    .home .div_Text h2{
         font-size: 40px;
     }
 
-    .hero .div_Text h2{
-        font-size: 40px;
-    }
-
-    .hero .div_Text p{
+    .home .div_Text p{
         font-size: 14px;
         margin: 25px auto;
         width: 100%;
     }
 
-    .hero .btn{
+    .home .btn{
         font-size: 16px;
         padding: 14px 30px;
     }
-    .hero .div_img{
+
+    .home .div_img{
         width: 70%;
     }
+
+    /* About */ 
 
     .about .div_text h2{
         font-size: 30px;
@@ -741,9 +802,13 @@ header .links .logo,
         width: 85%;
     }
 
+    /* Service */ 
+
+
     .top_section{
         font-size: 20px;
     }
+
     .services .boxs .box{
         width: 100%;
     }
@@ -752,6 +817,11 @@ header .links .logo,
         font-size: 55px;
     }
 
+    /* project */ 
+
+    .projects{
+        padding-bottom: 40px;
+    }
     .projects .project_box{
         flex-direction: column;
     }
@@ -771,26 +841,23 @@ header .links .logo,
     }
 
     .projects .project_box .text p a{
-       
         font-size: 23px;
     }
 
-    .projects{
-        padding-bottom: 40px;
-    }
+
+    /* Contact */ 
 
     .contact{
         padding-top: 0;
     }
 
-    .contact .social_contact .links{
+    .contact .container-chill{
         flex-direction: column;
     }
 
     .contact .social_contact .links a{
         width: 100%;
     }
-
 
     .contact .top_section{
         margin-bottom: 60px;
@@ -805,5 +872,15 @@ header .links .logo,
         padding: 15px 20px;
         margin-bottom: 20px;
     }
+
+
+    /* Footer */ 
+    #footer {
+        background-color: #1f3947;
+        text-align: center;
+        color: #fff;
+        padding: 10px 0;
+        font-size: 11px;
+      }
 }
 
